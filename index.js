@@ -2,8 +2,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 // const mrkdown = require('generateMarkdown');
-
-// TODO: Create an array of questions for user input
 // All of my README questions. 
 
 inquirer.prompt (
@@ -79,16 +77,16 @@ inquirer.prompt (
 function readmeTemplate (data) {
    var template = [];
    template.push(
-    `# Description`, `${data.description}`,
-    `# Installation`, `${data.install}`, `${data.installtwo}`,
-    `# Usage`, `${data.usage}`,
-    `# Contributing`, `${data.usagetwo}`,
-    `# Tests`, `${data.tests}`,
-    `# License`,
-    `# Questions`,
-    `## Feel free to email me with questions, or drop by my GitHub`,
-    `# GitHub: ${data.username}`,
-    `# Email: ${data.email}`
+    `## Description`, `${data.description}`,
+    `## Installation`, `${data.install}`, `${data.installtwo}`,
+    `## Usage`, `${data.usage}`,
+    `## Contributing`, `${data.usagetwo}`,
+    `## Tests`, `${data.tests}`,
+    `## License`,
+    `## Questions`,
+    `### Feel free to email me with questions, or drop by my GitHub`,
+    `## GitHub:`, `${data.username}`,
+    `## Email:`, `${data.email}`
    )
    return template.join('\n');
 
